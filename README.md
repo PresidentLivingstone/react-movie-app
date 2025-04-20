@@ -24,8 +24,8 @@ A responsive web application that allows users to browse and favorite movies, bu
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/PresidentLivingstone/react-movie-app.git
-   cd movie-favorites-app
+   git clone https://github.com/PresidentLivingstone/react-movie-app
+   cd react-movie-app
    ```
 
 2. Install dependencies:
@@ -33,14 +33,14 @@ A responsive web application that allows users to browse and favorite movies, bu
    npm install
    ```
 
-3. Create a `.env` file in the root directory and add your TMDb API key:
+3. Add your TMDb API key:
    ```
-   REACT_APP_TMDB_API_KEY=your_api_key_here
+ TMDB_API_KEY=your_api_key_here
    ```
 
 4. Start the development server:
    ```bash
-   npm start
+   npm run dev
    ```
 
 ## Usage

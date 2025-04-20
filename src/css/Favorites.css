@@ -1,0 +1,132 @@
+/* Favorites Section Styling */
+.favorites {
+  padding: 2rem;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.favorites h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.favorites-empty {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  font-size: 1.3rem;
+  color: #999;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.favorites-list {
+  margin-top: 2rem;
+}
+
+.favorites-grid {
+  display: flex;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Favorite item container */
+.favorite-item {
+  position: relative;
+}
+
+/* Remove button styling */
+.remove-btn {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: rgba(255, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  opacity: 0;
+  transform: translateY(10px);
+  z-index: 15;
+}
+
+.favorite-item:hover .remove-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.remove-btn:hover {
+  background-color: rgba(255, 0, 0, 0.9);
+}
+
+/* Movie Card Styling (already defined in your MovieCard.css) */
+/* Only keeping the animation for the empty state here */
+
+/* Empty state animation */
+@keyframes pulse {
+  0% { opacity: 0.7; }
+  50% { opacity: 1; }
+  100% { opacity: 0.7; }
+}
+
+.favorites-empty {
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 992px) {
+  .favorites-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .favorites {
+    padding: 1.5rem 1rem;
+  }
+  
+  .favorites h2 {
+    font-size: 1.5rem;
+  }
+  
+  .favorites-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+  }
+  
+  .favorites-empty {
+    font-size: 1.1rem;
+    padding: 1.5rem;
+  }
+  
+  .remove-btn {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.5rem;
+    bottom: 0.75rem;
+    right: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .favorites-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+  
+  .favorites h2 {
+    font-size: 1.3rem;
+  }
+  
+  .favorites-empty {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
